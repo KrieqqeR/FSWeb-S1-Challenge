@@ -175,7 +175,7 @@ NOT: DÖNDÜĞÜNÜZ DİZİN YUKARIDAKİ BİÇİMLE EŞLEŞMESİ GEREKİR, YA DA
 
 function indekseGoreFenomen(fenomenler,indeks) {
 
-  return `${indeks}. indekste bulunan fenomen: ${fenomenler[3].profile}`
+  return `${indeks}. indekste bulunan fenomen: ${fenomenler[indeks].profile}`
   
 }
 console.log(indekseGoreFenomen(fenomenler,3))
@@ -190,11 +190,16 @@ Aşağıdakileri yapmak için profilListesi'ni kullanın:
 🌟 Dönüş ÖRNEĞİ: ["Instagram", "Cristiano Ronaldo", "Kylie"....]
 */
 
-function profilListesi(/*kod*/) {
-  /*kod*/
+function profilListesi(fenomenler4) {
+  const fenomenlerkopya = [];
+  
+  for(let i = 0; i < fenomenler4.length; i++){
+    fenomenlerkopya.push(fenomenler4[i].profile)
+  }
+  return fenomenlerkopya
 }
 
-console.log(profilListesi())
+console.log(profilListesi(fenomenler));
 
 
 /* Görev 5:
@@ -206,10 +211,12 @@ Aşağıdakileri yapmak için fenomenSil'i kullanın:
 5. Ortaya çıkan diziyi döndürün
 
 ÖRNEK: fenomenSil işlevi fenomenler dizisi ve 0 indeks sayısı ile çağrılırsa, veri kümemizden 'Instagram' kaldırılmış olarak döndürür. */
-function fenomenSil(/*kod*/) {
-  /*kod*/
+function fenomenSil(fenomenler5,silinecekIndex){
+ const gorev5Dizi = [...fenomenler5]
+ gorev5Dizi.splice(silinecekIndex,1)
+ return gorev5Dizi
 }
-
+console.log(fenomenSil(fenomenler,0));
 
 
 /* Görev 6:
