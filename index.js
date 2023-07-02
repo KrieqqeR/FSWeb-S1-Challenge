@@ -280,10 +280,13 @@ Aşağıdakileri yapmak için fenomenGonderimSayisi'nı kullanın:
 ÖRNEK: fenomenGonderimSayisi(fenomenler, 'Will Smith') çağrıldığında "136" dönmelidir
 */
 
-function fenomenGonderimSayisi(/*kod*/) {
-  /*kod*/
+function fenomenGonderimSayisi(fenomen8,fenomenName) {
+  for(let i = 0; i<fenomen8.length; i++){
+    if(fenomen8[i].profile === "Will Smith")
+    return fenomen8[i].posts
+  }
 }
-
+console.log(fenomenGonderimSayisi(fenomenler,"Will Smith"))
 
 
 /* Görev 9:
