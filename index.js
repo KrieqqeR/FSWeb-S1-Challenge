@@ -173,9 +173,12 @@ Aşağıdaki işlemleri yapmak için indekseGoreFenomen işlevini kullanın:
 NOT: DÖNDÜĞÜNÜZ DİZİN YUKARIDAKİ BİÇİMLE EŞLEŞMESİ GEREKİR, YA DA TESTİ GEÇMEYECEKTİR!
 ÖRNEK: fenomenler dizisi ve 3 sayısı ile indekseGoreFenomen çağrılırsa, `3. indekste bulunan fenomen: Leo Messi' */
 
-function indekseGoreFenomen(/*kod*/) {
-  /*kod*/
+function indekseGoreFenomen(fenomenler,indeks) {
+
+  return `${indeks}. indekste bulunan fenomen: ${fenomenler[3].profile}`
+  
 }
+console.log(indekseGoreFenomen(fenomenler,3))
 
 
 
@@ -191,6 +194,7 @@ function profilListesi(/*kod*/) {
   /*kod*/
 }
 
+console.log(profilListesi())
 
 
 /* Görev 5:
